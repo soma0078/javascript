@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript example</title>
+    <style>
+        p {
+            border:2px solid lightcoral;
+            border-radius:5px;
+            cursor:pointer;
+            box-shadow:1px 2px 1px rgb(0 0 200 / 0.4 );
+            text-align:center;
+            background:rgb(0 0 200 / 0.6 );
+            color:rgb(255 255 255 / 1 );
+            display:inline-block;
+            padding:10px 20px;
+            text-transform:uppercase;
+        }
+    </style>
+</head>
+<body>
+    <p>Player 1 : Chris</p>
+</body>
+
+<script>
+    const para = document.querySelector('p');
+
+    para.addEventListener('click', updateName );
+
+    function updateName(){
+        const name = prompt('Enter a new name');
+        para.textContent = `Player : ${name}`;
+    }
+
+</script>
+</html>
