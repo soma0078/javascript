@@ -25,5 +25,12 @@
             button.addEventListener('click', createParagraph);
         }
     });
+
+    /*  
+    HTML 코드보다 JavaScript를 먼저 불러와버리면 코드가 올바르게 동작하지 못할 것이다.
+    이건 이벤트, 그중에서도 HTML 본문 전체를 불러와 읽었다는 것을 나타내는 브라우저 DOMContentLoaded 이벤트를 수신하는 수신기이다.
+    이 블록 내부의 JavaScript는 이벤트가 발생하기 전에는 실행되지 않으므로 로딩 시점으로 인한 오류를 예방할 수 있다.
+     */
+
 </script>
 </html>
