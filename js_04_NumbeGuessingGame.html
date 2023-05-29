@@ -19,7 +19,7 @@
     .form input[type="number"]{
         width:200px;
     }
-    .last_result{
+    .lastResult{
         color:white;
         padding:3px;
     }
@@ -31,16 +31,28 @@
 
     <div class="form">
         <label for="guessField">Enter a guess : </label>
-        <input type="number" min="1" max="100" required id="guessField" class="guess_field">
-        <input type="submit" value="Submit guess" class="guess_submit">
+        <input type="text" id="guessField" class="guessField">
+        <input type="submit" value="Submit guess" class="guessSubmit">
     </div>
 
-    <div class="resulte_paras">
+    <div class="resultParas">
         <p class="guesses"></p>
-        <p class="last_result"></p>
-        <p class="low_or_hi"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
     </div>
 </body>
 
 <script src="js/js_04.js"></script>
+
+<!--
+    console.log
+
+    guessField.value ='Hello';
+    guesses.textContent = 'Where is my paragraph?';
+    guesses.style.backgroundColor = 'pink';
+    guesses.style.fontSize = '200%';
+    guesses.style.padding ='10px';
+    guesses.style.boxShadow ='3px 3px 6px black';
+
+-->
 </html>
