@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 연산자</title>
+</head>
+<body>
+    <button>Start machine</button>
+    <p>The machine is stopped.</p>
+
+    <script>
+        var myInt = 5;
+        var myFloat = 6.667;
+        console.log(myInt);  // 5
+        console.log(myFloat); // 6.667
+
+        console.log(typeof myInt);  // number
+        console.log(typeof myFloat);  // number
+
+        // 고정된 소수점 자리수로 반올림 : toFixed() 메서드
+        const lotsOfDecimal = 1.766584958675746364;
+        console.log(lotsOfDecimal);  // 1.766584958675746364
+
+        const twoDecimalPlaces = lotsOfDecimal.toFixed(2);
+        console.log(twoDecimalPlaces);  // 1.77
+
+        // 숫자 데이터 타입으로 변환하기
+        let myNumber = "74";
+        //myNumber += 3;
+        // console.log(typeof myNumber); // string
+
+        myNumber = Number(myNumber) + 3;
+        console.log(typeof myNumber); // number
+
+
+        // 증감 연산자
+        var num1 = 4;
+        num1++; // 4
+        num1; // 5
+
+        var num2 = 6;
+        num2--; // 6
+        num2; // 5
+
+        // 변수 앞에 연산자를 사용하면 브라우저가 변수를 먼저 증가/감소시키고 값을 반환한다
+        ++num1; // 6
+        --num2; // 4
+
+        // 대입 연산자
+        var x = 3;
+        var y = 4;
+        x = y; // 4 => x의 값은 y와 같은 4 이다
+        x *= y; // x = x * y
+        console.log(x) // 12
+
+        // 비교 연산자
+        var btn = document.querySelector('button');
+        var txt = document.querySelector('p');
+
+        btn.addEventListener('click', updateBtn);
+
+        function updateBtn() {
+        if (btn.textContent === 'Start machine') { // 일치 연산자
+            btn.textContent = 'Stop machine';
+            txt.textContent = 'The machine has started!';
+        } else {
+            btn.textContent = 'Start machine';
+            txt.textContent = 'The machine is stopped.';
+        }
+        }
+    </script>
+</body>
+</html>
