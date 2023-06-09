@@ -5,13 +5,54 @@
     <title>JS 조건문</title>
 </head>
 <body>
+    <label for="shopping-check">Has the shopping been done? </label>
+    <input type="checkbox" id="shopping-check">
+
+    <p></p>
+
 
     <pre>
+    if ... else 문    
+
     if (조건) {
         만약 조건(condition)이 참일 경우 실행할 코드
         } else {
         대신 실행할 다른 코드
     }
+
+    if (조건) {
+        만약 조건(condition)이 참일 경우 실행할 코드
+        }
+    
+        실행할 다른 코드
+
+    if (조건) 만약 조건(condition)이 참일 경우 실행할 코드
+    else 대신 실행할 다른 코드
     </pre>
+
+    <script>
+      const checkBox = document.querySelector('input');
+      const para = document.querySelector('p');
+      let shoppingDone = false;
+
+      checkBox.addEventListener('change', () => {
+        checkBox.disabled = true;
+        shoppingDone = true;
+        updateAllowance();
+      });
+
+      function updateAllowance() {
+        let childsAllowance;
+        if (shoppingDone === true) {
+          childsAllowance = 10;
+        } else {
+          childsAllowance = 5;
+        }
+
+        para.textContent = `Child has earned \$${childsAllowance} this week.`;
+      }
+
+      updateAllowance();
+    </script>
 </body>
 </html>
