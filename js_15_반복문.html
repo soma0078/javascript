@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS 반복문</title>
+</head>
+<body>
+    <pre>
+    for (초기화식; 종료 조건; 증감식) {
+        // 실행할 코드
+      }
+      </pre>
+      <p></p>
+    <script>
+        const cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
+        let info = 'My cats are called ';
+        const para = document.querySelector('p');
+
+        for (let i = 0; i < cats.length; i++) {
+        info += cats[i] + ', ';
+        }
+
+        para.textContent = info;
+    </script>
+</body>
+</html>
